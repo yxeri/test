@@ -40,7 +40,7 @@ export default function handler(
       title: 'Laptop',
       link: 'laptop',
       items: [{
-        title: '16"',
+        title: '16',
         link: '16',
       }],
     }, {
