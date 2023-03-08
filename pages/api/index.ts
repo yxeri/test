@@ -51,7 +51,7 @@ export default function handler(
       type: 'columns',
       columns: [{
         heading: 'Lorem ipsum',
-        image: `https://${process.env.VERCEL_URL}/wide.jpg`,
+        image: `https://${process.env.VERCEL_URL}/wide.png`,
         text: 'Nunc efficitur, lorem non egestas tincidunt',
       }],
     }, {
