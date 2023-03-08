@@ -51,28 +51,28 @@ export default function handler(
       type: 'columns',
       columns: [{
         heading: 'Lorem ipsum',
-        image: `${process.env.VERCEL_URL}/wide.jpg`,
+        image: `https://${process.env.VERCEL_URL}/wide.jpg`,
         text: 'Nunc efficitur, lorem non egestas tincidunt',
       }],
     }, {
       type: 'columns',
       columns: [{
         heading: 'Lorem ipsum',
-        image: `${process.env.VERCEL_URL}/image1.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image1.jpg`,
         text: 'Nunc efficitur, lorem non egestas tincidunt',
         link: 'https://google.com',
       }, {
         heading: 'Ut erat augue',
-        image: `${process.env.VERCEL_URL}/image2.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image2.jpg`,
         text: 'Sed hendrerit sapien at tellus tristique',
         link: 'https://google.com',
       }, {
         heading: 'Nullam luctus convallis',
-        image: `${process.env.VERCEL_URL}/image3.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image3.jpg`,
         text: 'Integer consectetur eros sed',
         link: 'https://google.com',
       }, {
-        image: `${process.env.VERCEL_URL}/image4.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image4.jpg`,
         text: 'Maecenas varius, ligula quis ullamcorper',
         link: 'https://google.com',
       }],
@@ -80,24 +80,24 @@ export default function handler(
       type: 'carousel',
       items: [{
         heading: 'Lorem ipsum',
-        image: `${process.env.VERCEL_URL}/image1.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image1.jpg`,
         text: 'Nunc efficitur, lorem non egestas tincidunt',
         link: 'https://google.com',
       }, {
         heading: 'Ut erat augue',
-        image: `${process.env.VERCEL_URL}/image2.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image2.jpg`,
         text: 'Sed hendrerit sapien at tellus tristique',
         link: 'https://google.com',
       }, {
         heading: 'Nullam luctus convallis',
-        image: `${process.env.VERCEL_URL}/image3.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image3.jpg`,
         text: 'Integer consectetur eros sed',
         link: 'https://google.com',
       }, {
-        image: `${process.env.VERCEL_URL}/image4.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image4.jpg`,
         text: 'Maecenas varius, ligula quis ullamcorper',
       }, {
-        image: `${process.env.VERCEL_URL}/image5.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image5.jpg`,
         text: 'Maecenas varius, ligula quis ullamcorper',
       }],
     }],
