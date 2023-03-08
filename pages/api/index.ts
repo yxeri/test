@@ -97,7 +97,7 @@ export default function handler(
         image: `https://${process.env.VERCEL_URL}/image4.jpg`,
         text: 'Maecenas varius, ligula quis ullamcorper',
       }, {
-        image: `https://${process.env.VERCEL_URL}/image5.jpg`,
+        image: `https://${process.env.VERCEL_URL}/image5.png`,
         text: 'Maecenas varius, ligula quis ullamcorper',
       }],
     }],
