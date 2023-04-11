@@ -4,21 +4,25 @@ type BaseMenuItem = {
 };
 
 type MenuItemWithUrl = BaseMenuItem & {
-  url: string,
-  link?: never,
+  url: string, // External url
+  link?: never, // Internal path
 };
 
 type MenuItemWithLink = BaseMenuItem & {
-  link: string,
-  url?: never,
+  link: string, // Internal path
+  url?: never, // External url
 };
 
-type MenuItem = MenuItemWithUrl | MenuItemWithLink;
+type MenuItemWithTitle = BaseMenuItem & {
+  items: MenuItem[],
+};
+
+type MenuItem = MenuItemWithUrl | MenuItemWithLink | MenuItemWithTitle;
 
 type BaseColumn = {
-  link?: string,
+  link?: string, // Can be external url or internal path
   heading?: string,
-  image?: string,
+  image?: string, // Url to image
   text?: string,
 };
 
@@ -31,7 +35,7 @@ type ColumnWithHeading = BaseColumn & {
 };
 
 type ColumnWithImage = BaseColumn & {
-  image: string,
+  image: string, // Url to image
 };
 
 type Column = ColumnWithImage | ColumnWithText | ColumnWithHeading;
@@ -45,10 +49,10 @@ type ColumnBlock = BaseBlock & {
 };
 
 type CarouselItem = {
-  image: string,
+  image: string, // Url to image
   heading?: string,
   text: string,
-  link?: string,
+  link?: string, // Can be external url or internal path
 };
 
 type CarouselBlock = BaseBlock & {
@@ -56,5 +60,10 @@ type CarouselBlock = BaseBlock & {
   items: CarouselItem[],
 };
 
-export type Block = ColumnBlock | CarouselBlock;
-export type Navigation = MenuItem[];
+type Block = ColumnBlock | CarouselBlock;
+type Navigation = MenuItem[];
+
+export type Api = {
+  navigation: Navigation,
+  blocks: Block[],
+};

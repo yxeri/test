@@ -1,18 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import {
-  Block,
-  Navigation
+  Api,
 } from '@/pages/api/types';
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Index = {
-  navigation: Navigation,
-  blocks: Block[],
-};
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Index>
+  res: NextApiResponse<Api>
 ) {
   res.status(200).json({
     navigation: [{
@@ -23,10 +17,10 @@ export default function handler(
         link: 'store/watch',
         items: [{
           title: 'Smart Watch',
-          link: 'store/smart'
+          link: 'store/watch/smart'
         }, {
-          title: 'Laptop',
-          link: 'store/laptop'
+          title: 'Pocket watch',
+          link: 'store/watch/pocket'
         }],
       }],
     }, {
@@ -40,12 +34,18 @@ export default function handler(
       title: 'Laptop',
       link: 'laptop',
       items: [{
-        title: '16',
-        link: '16',
+        title: 'Gaming',
+        link: 'laptop/gaming',
+      }, {
+        title: 'Office',
+        link: 'laptop/office'
       }],
     }, {
-      title: 'Project',
-      url: 'https://google.com',
+      title: 'External Project',
+      items: [{
+        title: 'Project 1',
+        url: 'https://google.com',
+      }]
     }],
     blocks: [{
       type: 'columns',
@@ -67,12 +67,11 @@ export default function handler(
         text: 'Sed hendrerit sapien at tellus tristique',
         link: 'https://google.com',
       }, {
-        heading: 'Nullam luctus convallis',
         image: `https://${process.env.VERCEL_URL}/image3.jpg`,
         text: 'Integer consectetur eros sed',
-        link: 'https://google.com',
+        link: 'laptop/gaming',
       }, {
-        image: `https://${process.env.VERCEL_URL}/image4.jpg`,
+        heading: 'Nullam luctus convallis',
         text: 'Maecenas varius, ligula quis ullamcorper',
         link: 'https://google.com',
       }],
